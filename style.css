@@ -1,0 +1,259 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Gilroy", Arial, Helvetica, sans-serif;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+#main {
+  width: 100%;
+  height: 100%;
+  display: flex; /* flex is used in the parent items to arrange the contents of the child elements */
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("Gilroy-Regular.ttf") format("truetype"); /* Adjust the path and format as needed */
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("Gilroy-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* there are four main div sections to be used 
+we divide the whole screen into - left and right 
+and divide the left and right into -- top and bottom  */
+
+/* **Note -- if you dont understand the div division and the space taken, just apply background-color property to different sections and check */
+
+/* code for left side  */
+#left {
+  width: 75%;
+  height: 100%;
+  background-color: red;
+}
+
+#left #left-top {
+  position: relative;
+  width: 100%;
+  height: 70%;
+  background-image: url(https://images.unsplash.com/photo-1611255550543-b5ecb01dfddc?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-position: center;
+  background-size: cover;
+}
+
+#left-top #left-arrow {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 60px;
+  width: 70px;
+  background-color: white;
+  border-radius: 10% 0% 0% 0%;
+}
+
+#left-arrow i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 20px;
+  background-color: rgba(0, 0, 0, 0.279);
+  border-radius: 50%;
+}
+
+#left #left-bottom {
+  width: 100%;
+  height: 30%;
+  color: #fff;
+  padding: 50px 150px;
+  background-color: rgb(18, 18, 18);
+}
+
+#left-bottom-content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+}
+
+#contentleft {
+  width: 45%;
+  height: 100%;
+  /* background-color: aqua; */
+}
+
+#contentright {
+  width: 45%;
+  height: 100%;
+  /* background-color: chartreuse; */
+}
+
+#contentleft p {
+  width: 70%;
+  font-size: 12px;
+  margin-top: 5px;
+  /* background-color: antiquewhite; */
+}
+
+.row-box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.row-element {
+  display: flex;
+  margin-top: 10px;
+}
+
+.row-element i {
+  color: rgb(139, 156, 139);
+}
+
+.text-element {
+  margin-left: 5px;
+}
+
+.text-element h6 {
+  opacity: 0.5;
+  font-weight: 500;
+  margin-top: 4px;
+}
+
+/* code for right side  */
+#right {
+  width: 25%;
+  height: 100%;
+}
+
+#right #right-top {
+  display: flex;
+  flex-direction: column;
+  padding: 70px;
+  width: 100%;
+  height: 70%;
+  background-color: #fff;
+  position: relative;
+}
+
+#right #right-bottom {
+  position: relative;
+  width: 100%;
+  height: 30%;
+  /*background-color: #dadada;  grey color  */
+  background-image: url(https://plus.unsplash.com/premium_photo-1673014201850-86eed295fa5d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8bWluaW1hbCUyMHBsYW50fGVufDB8fDB8fHww);
+  background-size: cover;
+}
+
+#right-top a {
+  text-decoration: none;
+  color: black;
+  font-weight: 400;
+  font-size: 15px;
+  letter-spacing: 3px;
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+/* #right-top a:nth-child(2)        it will select the second tag whatever it may be but when we added menu item, second tag 
+                                    became "home" and not "pricing", which is not correct.. so we gave that element an id and used that for effect
+{position: relative;
+  margin-left: 20px;
+} */
+
+/* #right-top a:nth-child(2)::before   before is used to much something before the element, and if we use "before, after" in css, it is 
+                                       necessary to put content tag. Also, there should not be any space in ":" otherwise it will not work 
+{content: "";
+  position: absolute;
+  left: -20px;
+  top:8px;  
+  height: 2px;
+  width: 10px;
+  background-color: black;
+} */
+
+#right-top #selected {
+  position: relative;
+  margin-left: 20px;
+}
+
+#right-top #selected::before {
+  content: "";
+  position: absolute;
+  left: -20px;
+  top: 8px;
+  height: 2px;
+  width: 10px;
+  background-color: black;
+}
+
+.icons {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  top: 0;
+  right: 0;
+  padding: 30px;
+}
+
+.icons i {
+  font-size: 20px;
+}
+
+#bottom-flower {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100px;
+  height: 100px;
+  background-image: url(https://images.unsplash.com/photo-1466781783364-36c955e42a7f?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  background-size: cover;
+}
+
+#bottom-flower i   /* arrow */ {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgba(0, 0, 0, 0.479);
+  font-size: 20px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+#right-bottom #right-container {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  padding: 10px 20px;
+  background-color: white;
+  border-radius: 10px;
+  width: 70%;
+}
+
+#right-bottom #right-container h3 {
+  margin-top: 7px;
+  font-size: 16px;
+  /* line-height: 1; */
+}
+#right-bottom #right-container h5 {
+  font-size: 14px;
+  font-weight: 500;
+
+  opacity: 0.5;
+}
